@@ -1,0 +1,185 @@
+@use 'base';
+@use 'color';
+@use 'font';
+@use 'flex';
+@use 'align';
+
+body {
+  padding: 8rem 2rem;
+}
+
+h1 {
+  font-size: font.$size-h1-desktop;
+}
+
+.page-wrapper {
+  max-width: 1060px;
+  margin: auto;
+}
+
+// background image
+.bg-img__top {
+  @include base.bg-img('top', 'left');
+}
+
+.bg-img__bottom {
+  @include base.bg-img('bottom', 'right');
+}
+
+// title section
+.title {
+  flex: 45%;
+  flex-grow: 0;
+
+  h1 {
+    line-height: 1;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+}
+
+// rating section
+.rating {
+  flex: 40%;
+  flex-grow: 0;
+
+  > div {
+    @include base.box-bg(color.$light-grayish-magenta);
+    align-items: center;
+    padding: 1rem 2rem;
+    position: relative;
+  }
+
+  .flex-container + .flex-container {
+    margin-top: 1rem;
+  }
+
+  .rating__1 {
+    right: 20%;
+  }
+
+  .rating__2 {
+    right: 10%;
+  }
+
+  .rating__star {
+    flex: 30%;
+  }
+
+
+  .rating__text {
+    flex: 60%;
+    font-size: 0.8rem;
+    font-weight: font.$weight-bold;
+    letter-spacing: 0.05em;
+  }
+}
+
+
+
+
+// testimonial section
+.testimonial {
+  flex: 100%;
+  font-size: 0.8rem;
+  margin-top: 8rem;
+
+  > div {
+    @include base.box-bg(color.$very-dark-magenta);
+    flex: 0 0 31%;
+    padding: 3rem 2rem;
+    position: relative;
+  }
+
+  .testimonial__1 {
+    bottom: 2rem;
+  }
+
+  .testimonial__2 {
+    bottom: 1rem;
+  }
+
+  .testimonial__avatar {
+
+    > img {
+      width: 3em;
+      border-radius: 1.5em;
+    }
+  }
+
+  .testimonial__name {
+    margin-left: 2rem;
+  }
+
+  .testimonial__comment {
+    flex: 100%;
+    line-height: 1.8;
+    margin-top: 1.8rem;
+  }
+}
+
+
+// attribution section
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 2rem;
+
+  a {
+    color: hsl(228, 45%, 44%);
+  }
+}
+
+@media (max-width: 800px) {
+
+  body {
+    padding: 6rem 2rem;
+  }
+
+  h1 {
+    font-size: font.$size-h1-mobile;
+  }
+
+  .title {
+    flex: 100%;
+    text-align: center;
+
+    p {
+      margin-top: 2rem;
+    }
+  }
+
+  .rating {
+    flex: 100%;
+    text-align: center;
+    margin-top: 3rem;
+
+    > div {
+      position: static;
+      justify-content: center;
+    }
+
+    .rating__star {
+      flex: 100%;
+    }
+
+    .rating__text {
+      flex: 100%;
+      margin-top: 1rem;
+    }
+
+  }
+
+  .testimonial {
+    margin-top: 3rem;
+
+    > div {
+      flex: 100%;
+      position: static;
+      margin-top: 1rem;
+    }
+  }
+}

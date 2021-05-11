@@ -1,0 +1,23 @@
+$very-dark-magenta: hsl(300, 43%, 22%);
+$soft-pink: hsl(333, 80%, 67%);
+$dark-grayish-magenta: hsl(303, 10%, 53%);
+$light-grayish-magenta: hsl(300, 24%, 96%);
+$white: hsl(0, 0%, 100%);
+
+$colors: (
+  'very-dark-magenta': $very-dark-magenta,
+  'soft-pink': $soft-pink,
+  'dark-grayish-magenta': $dark-grayish-magenta,
+  'light-grayish-magenta': $light-grayish-magenta,
+  'white': $white
+);
+
+@each $key, $value in $colors {
+  .bg-#{$key} {
+    background-color: $value;
+  }
+
+  .#{$key} {
+    color: $value;
+  }
+}

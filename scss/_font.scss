@@ -1,0 +1,33 @@
+$family-spartan: 'Spartan', sans-serif;
+
+$weight-bold: 700;
+$weight-regular: 500;
+$weight-light: 400;
+
+$size-rem: 15px;
+$size-h1-desktop: 3rem;
+$size-h1-mobile: 2rem;
+
+$font-families: (
+  'spartan': $family-spartan
+);
+
+$font-weights: (
+  'bold': $weight-bold,
+  'regular': $weight-regular,
+  'light': $weight-light
+);
+
+
+html {
+  font-family: $family-spartan;
+  font-size: $size-rem;
+  font-weight: $weight-light;
+  line-height: 1.5;
+}
+
+@each $key, $value in $font-weights {
+  .font-weight-#{$key} {
+    font-weight: $value;
+  }
+}
