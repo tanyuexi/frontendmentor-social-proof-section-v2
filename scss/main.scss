@@ -4,18 +4,6 @@
 @use 'flex';
 @use 'align';
 
-body {
-  padding: 8rem 2rem;
-}
-
-h1 {
-  font-size: font.$size-h1-desktop;
-}
-
-.page-wrapper {
-  max-width: 1060px;
-  margin: auto;
-}
 
 // background image
 .bg-img__top {
@@ -28,8 +16,7 @@ h1 {
 
 // title section
 .title {
-  flex: 45%;
-  flex-grow: 0;
+  flex: 0 0 45%;
 
   h1 {
     line-height: 1;
@@ -42,8 +29,7 @@ h1 {
 
 // rating section
 .rating {
-  flex: 40%;
-  flex-grow: 0;
+  flex: 0 0 40%;
 
   > div {
     @include base.box-bg(color.$light-grayish-magenta);
@@ -65,12 +51,12 @@ h1 {
   }
 
   .rating__star {
-    flex: 30%;
+    flex: 0 0 30%;
   }
 
 
   .rating__text {
-    flex: 60%;
+    flex: 0 0 60%;
     font-size: 0.8rem;
     font-weight: font.$weight-bold;
     letter-spacing: 0.05em;

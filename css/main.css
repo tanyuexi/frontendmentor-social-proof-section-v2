@@ -5,11 +5,17 @@
 }
 
 body {
+  padding: 8rem 2rem;
   position: relative;
 }
 
 img {
   vertical-align: middle;
+}
+
+.page-wrapper {
+  max-width: 1060px;
+  margin: auto;
 }
 
 .bg-very-dark-magenta {
@@ -52,13 +58,6 @@ img {
   color: white;
 }
 
-html {
-  font-family: "Spartan", sans-serif;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.5;
-}
-
 .font-weight-bold {
   font-weight: 700;
 }
@@ -69,6 +68,17 @@ html {
 
 .font-weight-light {
   font-weight: 400;
+}
+
+html {
+  font-family: "Spartan", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 .flex-container-space-around, .flex-container-space-between, .flex-container {
@@ -98,19 +108,6 @@ html {
   text-align: justify;
 }
 
-body {
-  padding: 8rem 2rem;
-}
-
-h1 {
-  font-size: 3rem;
-}
-
-.page-wrapper {
-  max-width: 1060px;
-  margin: auto;
-}
-
 .bg-img__top {
   position: absolute;
   top: 0;
@@ -124,8 +121,7 @@ h1 {
 }
 
 .title {
-  flex: 45%;
-  flex-grow: 0;
+  flex: 0 0 45%;
 }
 .title h1 {
   line-height: 1;
@@ -135,8 +131,7 @@ h1 {
 }
 
 .rating {
-  flex: 40%;
-  flex-grow: 0;
+  flex: 0 0 40%;
 }
 .rating > div {
   border-radius: 0.5rem;
@@ -155,10 +150,10 @@ h1 {
   right: 10%;
 }
 .rating .rating__star {
-  flex: 30%;
+  flex: 0 0 30%;
 }
 .rating .rating__text {
-  flex: 60%;
+  flex: 0 0 60%;
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.05em;
